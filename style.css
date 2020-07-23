@@ -2,6 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color: lightyellow;
 }
 
 textarea{
@@ -15,10 +16,10 @@ textarea{
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  background-color: lightblue;
   color: black;
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 10px solid maroon;
 }
 
 .description{
@@ -59,13 +60,13 @@ textarea{
 
 .saveBtn {
   border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-radius: 0px 10px 10px 0px;
   background-color: #06AED5;
   color: white;
+  
 }
 
 .saveBtn i:hover {
-  font-size: 20px;
+  font-size: 36px;
   transition: all .3s ease-in-out;
 }
