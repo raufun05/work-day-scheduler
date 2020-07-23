@@ -30,6 +30,25 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
+      <body>
+        <header class="jumbotron">
+          <h1 class="display-3">Work Day Scheduler</h1>
+          <p class="lead">A simple calendar app for scheduling your work day</p>
+          <div id="currentDay" class="lead"><p></p></div>
+        </header>
+        <div class="container">
+          <!-- Timeblocks go here -->
+          <div class="row time-block" id="hour9" >
+            <div class="col-md-1 hour"> 9:00am </div>
+            <textarea class="col-md-10 description"></textarea>
+            <button class="btn saveBtn col-md-1"><i class="fa fa-floppy-o"></i></button>
+          </div>
+          <div class="row time-block" id="hour9" >
+            <div class="col-md-1 hour"> 10:00am </div>
+            <textarea class="col-md-10 description"></textarea>
+            <button class="btn saveBtn col-md-1"><i class="fa fa-floppy-o"></i></button>
+          </div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
