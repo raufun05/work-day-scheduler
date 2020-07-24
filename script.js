@@ -1,16 +1,25 @@
-$(document).ready(function () {// essentially tells engine to load 1)html & 2)css first.
-    //display current day & time.
-    $("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a"));
-
+//The ready() method is used to make a function available after the document is loaded.
+$(document).ready(function () {
+    //Used Moment.js library to display current day & time 
+    $('#currentDay').text(moment().format('dddd') + ", " + moment().format('MMMM Do YYYY, h:mm:ss a'));
+      
     //Assign saveBtn click listener for user input and time stamp??
-    $(".saveBtn").on("click", function () {
-        //get nearby values.
+    // $(".saveBtn").on("click", function () {
+    //     //get nearby values.
+    //     console.log(this);
+    //     var text = $(this).siblings(".description").val();
+    //     var time = $(this).parent().attr("id");
+
+    //     //set items in local storage.
+    //     localStorage.setItem(time, text);
+        $("button").click(function() {
+           //get nearby values.
         console.log(this);
         var text = $(this).siblings(".description").val();
         var time = $(this).parent().attr("id");
-
-        //set items in local storage.
+            
         localStorage.setItem(time, text);
+         
     })
     //load any saved data from LocalStorage - do this for each hour created.
     $("#hour9 .description").val(localStorage.getItem("hour9"));
