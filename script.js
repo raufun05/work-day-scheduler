@@ -4,25 +4,25 @@ $(document).ready(function () {
     $('#currentDay').text(moment().format('dddd') + ", " + moment().format('MMMM Do YYYY, h:mm:ss a'));
       
     //Assign saveBtn click listener for user input and time stamp??
-    // $(".saveBtn").on("click", function () {
-    //     //get nearby values.
-    //     console.log(this);
-    //     var text = $(this).siblings(".description").val();
-    //     var time = $(this).parent().attr("id");
-
-    //     //set items in local storage.
-    //     localStorage.setItem(time, text);
-        $("button").click(function() {
-           //get nearby values.
+    $(".saveBtn").on("click", function () {
+        //get nearby values.
         console.log(this);
         var text = $(this).siblings(".description").val();
         var time = $(this).parent().attr("id");
-            
+
+        //set items in local storage.
         localStorage.setItem(time, text);
+        // $("button").click(function() {
+        //    //get nearby values.
+        // console.log(this);
+        // var text = $(this).siblings(".description").val();
+        // var time = $(this).parent().attr("id");
+            
+        // localStorage.setItem(time, text);
          
     })
     //load any saved data from LocalStorage - do this for each hour created.
-    $("#hour9 .description").val(localStorage.getItem("hour9"));
+    $("#nine-am .description").val(localStorage.getItem("hour9"));
     $("#hour10 .description").val(localStorage.getItem("hour10"));
     $("#hour11 .description").val(localStorage.getItem("hour11"));
     $("#hour12 .description").val(localStorage.getItem("hour12"));
