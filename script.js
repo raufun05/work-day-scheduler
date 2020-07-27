@@ -2,27 +2,17 @@
 $(document).ready(function () {
     //Used Moment.js library to display current day & time 
     $('#currentDay').text("Today is " + moment().format('dddd') + ", " + moment().format('MMMM Do YYYY, h:mm:ss a'));
-    //$("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a")); 
-    //Assign saveBtn click listener for user input and time stamp??
-    // $(".saveBtn").on("click", function () {
-    //     //get nearby values.
-    //     console.log(this);
-    //     var text = $(this).siblings(".description").val();
-    //     var time = $(this).parent().attr("id");
-
-        
-        //localStorage.setItem(time, text);
-    //Assign saveBtn click listener for user input and time stamp??   
+    
+    //Identify the button and apply the click method  
         $("button").click(function() {
-           //get nearby values.
         console.log(this);
         var text = $(this).siblings(".description").val();
         var time = $(this).parent().attr("id");
-          //set items in local storage.  
+        //Set items to the local storage.  
         localStorage.setItem(time, text);
          
     })
-    //load any saved data from LocalStorage - do this for each hour created.
+    //Saved and Get data from LocalStorage
     $("#time9am .description").val(localStorage.getItem("time9am"));
     $("#time10am .description").val(localStorage.getItem("time10am"));
     $("#time11am .description").val(localStorage.getItem("time11am"));
@@ -35,15 +25,15 @@ $(document).ready(function () {
 
 
     function hourTracker() {
-        //get current number of hours.
+        //Get current hour
         var currentHour = moment().hour();
 
-        // loop over time blocks
+        // Used looping condition for time blocks
         $(".time-block").each(function () {
             var blockHour = parseInt($(this).attr("id").split("time")[1]);
             console.log( blockHour, currentHour)
 
-            //check if we've moved past this time
+            //Verify if else condition for present, past, and future time
             if (blockHour < currentHour) {
                 $(this).addClass("past");
                 $(this).removeClass("future");
