@@ -1,4 +1,5 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# 05 Third-Party APIs: 
+# Title: Work Day Scheduler
 
 Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
@@ -34,13 +35,21 @@ The following animation demonstrates the application functionality:
 
 ![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
 
+The following animation demonstrates the application functionality:
+
+![day schedule demo](./Assets/DaySchedule.png)
+
 ## Review
 
 You are required to submit the following for review:
 
 * The URL of the deployed application.
 
+https://raufun05.github.io/work-day-scheduler/
+
 * The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+
+https://github.com/raufun05/work-day-scheduler
 
 - - -
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
